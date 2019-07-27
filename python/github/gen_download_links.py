@@ -34,7 +34,7 @@ def __gen_links(directory, prefix, insertion, suffix):
     for file in __get_file_list(directory, suffix=suffix, recursive=True):
         file = file.replace(directory, '', 1)
         link = (prefix + project_name + insertion + file).replace(' ', '%20')  # replace ' ' with '%20'
-        print('[' + os.path.basename(file) + ']' + '(' + link + ')')
+        print('[' + os.path.basename(file) + ']' + '(' + link + ')' + '\n')
 
 
 def __get_file_list(directory, files_ignore=None, suffix=None, recursive=False):
