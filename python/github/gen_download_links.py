@@ -81,5 +81,4 @@ def __get_project_name(directory):
 
 
 if __name__ == '__main__':
-    project_name = ''
     main()
