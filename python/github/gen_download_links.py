@@ -33,8 +33,8 @@ def __gen_links(directory, prefix, insertion, suffix):
     project_name = __get_project_name(directory)
     for file in __get_file_list(directory, suffix=suffix, recursive=True):
         file = file.replace(directory, '', 1)
-        print('[' + os.path.basename(file) + ']' + \
-       	    '(' + prefix + project_name + insertion + file + ')')
+        link = (prefix + project_name + insertion + file).replace(' ', '%20')  # replace ' ' with '%20'
+        print('[' + os.path.basename(file) + ']' + '(' + link + ')')
 
 
 def __get_file_list(directory, files_ignore=None, suffix=None, recursive=False):
